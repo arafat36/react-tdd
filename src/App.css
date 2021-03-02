@@ -1,0 +1,14 @@
+@layer components {
+  .hello-world {
+    @apply 
+    text-2xl text-center font-bold font-mono p-5 sm:text-5xl 
+    bg-red-500 hover:bg-red-300 
+    transition-colors ease-in-out duration-500 
+    cursor-pointer
+    animate-pulse;
+  }
+
+  .App {
+    @apply container mx-auto flex flex-col;
+  }
+}
