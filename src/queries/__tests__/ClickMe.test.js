@@ -13,18 +13,18 @@ describe('ClickMe', () => {
   });
 
   it('contains a button to click', () => {
-    const button = screen.queryByRole('button');
+    const button = screen.getByRole('button');
     expect(button).toBeInTheDocument();
     expect(button).toBeEnabled();
   });
 
   test('button should say "Click me!"', () => {
-    const button = screen.queryByRole('button');
+    const button = screen.getByRole('button');
     expect(button.textContent).toEqual(expect.stringContaining('Click Me!'));
   });
 
   test('clicking the button changes the status message', async () => {
-    const button = screen.queryByRole('button');
+    const button = screen.getByRole('button');
 
     expect(screen.getByTestId('status')).toHaveTextContent(
       /^NOT yet clicked\.\.\.$/
