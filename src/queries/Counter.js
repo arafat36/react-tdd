@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import cls from './Counter.module.css';
+// import cls from './Counter.css'; // Doesn't work like this...
 
 function Counter() {
   const [total, setTotal] = useState(0);
@@ -11,28 +13,18 @@ function Counter() {
   }
 
   return (
-    <div className="container mt-4 mx-auto py-5 max-w-md text-center flex flex-col gap-6 bg-yellow-100">
-      <h1 className="text-3xl uppercase" data-testid="heading">
+    <div className={cls.wrapper}>
+      <h1 className={cls.heading} data-testid="heading">
         Counter
       </h1>
-      <div className="text-5xl font-mono" data-testid="total">
+      <div className={cls.total} data-testid="total">
         {total}
       </div>
-      <div className="flex gap-5 justify-center ">
-        <button
-          className="py-3 px-7 text-3xl font-bold bg-blue-200"
-          type="button"
-          onClick={increment}
-          data-testid="inc"
-        >
+      <div className={cls.buttons}>
+        <button type="button" onClick={increment} data-testid="inc">
           +
         </button>
-        <button
-          className="py-3 px-7 text-3xl font-bold bg-blue-200"
-          type="button"
-          onClick={decrement}
-          data-testid="dec"
-        >
+        <button type="button" onClick={decrement} data-testid="dec">
           -
         </button>
       </div>
