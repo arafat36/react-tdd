@@ -30,3 +30,11 @@ export const validatePosts = (() => {
 
   return (posts, options) => v.validate(posts, postsSchema, options);
 })();
+
+/*
+Handle other languages...
+var localized = result.errors.map(function(err){
+  return localeService.translate(err.name);
+});
+
+*/
