@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { fetchPosts } from '../data/posts';
 import SinglePost from './SinglePost';
+import cls from './Posts.module.css';
 
+console.log(cls);
 function Posts() {
   const [posts, setPosts] = useState([]);
 
@@ -14,12 +16,17 @@ function Posts() {
   }
 
   return (
-    <div className="wrapper">
-      <button type="button" onClick={onLoadBtnClick} data-testid="loadBtn">
+    <div className={cls.wrapper}>
+      <button
+        className={cls.loadBtn}
+        type="button"
+        onClick={onLoadBtnClick}
+        data-testid="loadBtn"
+      >
         Load Posts
       </button>
       {posts && (
-        <section role="feed" className="">
+        <section role="feed" className={cls.postsContainer}>
           {posts.map((p) => (
             <SinglePost key={p.id} {...p} aria-setsize={posts.length} />
           ))}

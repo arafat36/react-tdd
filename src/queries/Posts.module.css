@@ -1,0 +1,36 @@
+@layer components {
+  .wrapper {
+    @apply
+      p-5
+      /* w-full */
+      /* mx-auto */
+      bg-purple-50
+      border
+      border-gray-200
+      flex
+      flex-col
+  }
+
+  .loadBtn {
+    @apply
+      bg-blue-300
+      py-3 px-4
+      rounded-lg
+      uppercase
+      self-center
+      m-4
+      shadow
+      text-white
+      font-bold
+  }
+
+  .postsContainer {
+    @apply 
+      /* bg-green-300 */
+      p-4
+      space-y-4
+      /* flex
+      flex-col
+      items-center */
+  }
+}

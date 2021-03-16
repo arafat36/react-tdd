@@ -1,0 +1,66 @@
+@layer components {
+  .wrapper {
+    @apply
+      bg-white
+      p-4
+      border-2
+      rounded-md
+      shadow-md
+      max-w-2xl
+      mx-auto
+
+      md:p-6
+      md:text-lg
+  }
+
+  .heading {
+    @apply
+      flex
+      flex-wrap
+      items-center
+      gap-2
+
+      md:gap-3
+  }
+
+  .avatar {
+    @apply
+      flex-grow-0
+      w-16
+      h-16
+      mr-3
+      rounded-full
+      text-xs
+      text-center
+      leading-none
+      align-middle
+      overflow-ellipsis
+      flex
+      items-center
+      overflow-hidden
+      shadow-sm
+      border
+      border-opacity-5
+
+      md:w-20
+      md:h-20
+  }
+
+  .author {
+    @apply
+      flex-1
+  }
+
+  .date {
+    @apply
+      w-full
+      /* pl-2 */
+      opacity-60
+      text-sm
+  }
+
+  .content {
+    @apply
+      py-3
+  }
+}
